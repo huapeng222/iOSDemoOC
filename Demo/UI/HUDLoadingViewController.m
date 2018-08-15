@@ -38,10 +38,14 @@
     redView.backgroundColor=[UIColor redColor];
     hud.mode = MBProgressHUDModeCustomView;
     hud.customView=imageView;
-//    hud.minSize=CGSizeMake(200, 200);
     hud.graceTime = 0.5;
     hud.removeFromSuperViewOnHide = YES;
-    
+    //detailsLabel不支持换行
+    hud.label.text=@"正在加载中...";
+    //detailsLabel支持换行
+    hud.detailsLabel.text=@"加\n载\n中\n.\n.";
+    //设置背景色
+    hud.bezelView.color=[UIColor clearColor];
     [hud showAnimated:YES];
     
 }
