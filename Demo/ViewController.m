@@ -9,6 +9,9 @@
 #import "ViewController.h"
 #import "Masonry.h"
 #import "HUDLoadingViewController.h"
+#import "LocationViewController.h"
+
+#import "Person.pbobjc.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>{
     NSArray *datas;
@@ -21,8 +24,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    datas = @[@"加载gif动画的loading"];
+    datas = @[@"加载gif动画的loading",@"位置"];
     [self initUI];
+    
+    Person *person = [[Person alloc] init];
+    person.age = 100;
+    person.username = @"huang";
+    person.phone = @"10086";
+    NSData *data = [person data];
+    Person *p = [Person parseFromData:data error:nil];
+    
+    
+    NSLog(@"1");
 }
 
 - (void)initUI{
@@ -56,6 +69,9 @@
     if ([str isEqualToString:@"加载gif动画的loading"]) {
         HUDLoadingViewController *hudLoadingVC=[HUDLoadingViewController new];
         [self.navigationController pushViewController:hudLoadingVC animated:YES];
+    }else if ([str isEqualToString:@"位置"]){
+        LocationViewController *vc=[LocationViewController  new];
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 @end

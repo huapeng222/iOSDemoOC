@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import <BMKLocationkit/BMKLocationAuth.h>
+
+
 
 @interface AppDelegate ()
 
@@ -17,6 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [[BMKLocationAuth sharedInstance] checkPermisionWithKey:@"ivpYF3sk1eFzh9wdBxldrzLplxyTh3GA" authDelegate:nil];
     return YES;
 }
 
