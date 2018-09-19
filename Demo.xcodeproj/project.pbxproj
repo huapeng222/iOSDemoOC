@@ -44,6 +44,7 @@
 		85FDAE9821522A14005F51DC /* GPBRootObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 85FDAE7E21522A14005F51DC /* GPBRootObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		85FDAE9921522A14005F51DC /* GPBUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 85FDAE8021522A14005F51DC /* GPBUtilities.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		85FDAE9C21522EF6005F51DC /* Person.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 85FDAE9B21522EF6005F51DC /* Person.pbobjc.m */; };
+		85FDAEA02152435C005F51DC /* ProtobufViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85FDAE9F2152435C005F51DC /* ProtobufViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -138,6 +139,8 @@
 		85FDAE8021522A14005F51DC /* GPBUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPBUtilities.m; sourceTree = "<group>"; };
 		85FDAE9A21522EF6005F51DC /* Person.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.pbobjc.h; sourceTree = "<group>"; };
 		85FDAE9B21522EF6005F51DC /* Person.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.pbobjc.m; sourceTree = "<group>"; };
+		85FDAE9E2152435C005F51DC /* ProtobufViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProtobufViewController.h; sourceTree = "<group>"; };
+		85FDAE9F2152435C005F51DC /* ProtobufViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProtobufViewController.m; sourceTree = "<group>"; };
 		A5DE7748DAF98B0BAD17CB27 /* libPods-Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF1A691308035C998EBDB49A /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		E337AA258B66D7300F8AD036 /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
@@ -203,6 +206,7 @@
 		850A9B602123D6B600B46C0F /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				85FDAE9D21524349005F51DC /* proto */,
 				855B0F7421426B7E00ABE557 /* location */,
 				850A9B692123DB4000B46C0F /* loading.gif */,
 				850A9B612123D6CC00B46C0F /* HUDLoadingViewController.h */,
@@ -310,6 +314,15 @@
 				85FDAE5621522A10005F51DC /* Empty.pbobjc.m */,
 			);
 			path = protobuf;
+			sourceTree = "<group>";
+		};
+		85FDAE9D21524349005F51DC /* proto */ = {
+			isa = PBXGroup;
+			children = (
+				85FDAE9E2152435C005F51DC /* ProtobufViewController.h */,
+				85FDAE9F2152435C005F51DC /* ProtobufViewController.m */,
+			);
+			path = proto;
 			sourceTree = "<group>";
 		};
 		AEC45AD8EEAC9248540BBBDC /* Frameworks */ = {
@@ -464,6 +477,7 @@
 				85FDAE8B21522A14005F51DC /* Struct.pbobjc.m in Sources */,
 				85FDAE9721522A14005F51DC /* GPBDescriptor.m in Sources */,
 				850A9B4F2123D44000B46C0F /* ViewController.m in Sources */,
+				85FDAEA02152435C005F51DC /* ProtobufViewController.m in Sources */,
 				85FDAE8921522A14005F51DC /* Empty.pbobjc.m in Sources */,
 				85FDAE9321522A14005F51DC /* GPBWellKnownTypes.m in Sources */,
 				85FDAE8A21522A14005F51DC /* FieldMask.pbobjc.m in Sources */,

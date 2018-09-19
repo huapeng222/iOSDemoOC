@@ -11,7 +11,7 @@
 #import "HUDLoadingViewController.h"
 #import "LocationViewController.h"
 
-#import "Person.pbobjc.h"
+#import "ProtobufViewController.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>{
     NSArray *datas;
@@ -24,18 +24,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    datas = @[@"加载gif动画的loading",@"位置"];
+    datas = @[@"加载gif动画的loading",@"位置",@"protobuf"];
     [self initUI];
     
-    Person *person = [[Person alloc] init];
-    person.age = 100;
-    person.username = @"huang";
-    person.phone = @"10086";
-    NSData *data = [person data];
-    Person *p = [Person parseFromData:data error:nil];
-    
-    
-    NSLog(@"1");
 }
 
 - (void)initUI{
@@ -71,6 +62,9 @@
         [self.navigationController pushViewController:hudLoadingVC animated:YES];
     }else if ([str isEqualToString:@"位置"]){
         LocationViewController *vc=[LocationViewController  new];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if ([str isEqualToString:@"protobuf"]){
+        ProtobufViewController *vc=[ProtobufViewController  new];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }
